@@ -1,6 +1,6 @@
 <?php
 header('Content-Type: text/xml');
-echo "<?xml version='1.0' encoding='UTF-8'?>";
+//echo "<?xml version='1.0' encoding='UTF-8'";
 $city=$_POST['Body'];
 //$country="IN";
 //Two digit country code
