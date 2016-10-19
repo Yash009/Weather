@@ -8,17 +8,17 @@ $url="http://api.openweathermap.org/data/2.5/weather?APPID=eb8d1e4d0ede56c4af30d
 $json=file_get_contents($url);
 $data=json_decode($json,true);
 //Get current Temperature in Celsius
-var_dump($data);
-$output = $output.$data['main']['temp'];
+//var_dump($data);
+$output[] = $output.$data['main']['temp'];
 //Get weather condition
-$output = $output.$data['weather'][0]['main'];
+$output[] = $output.$data['weather'][0]['main'];
 //Get cloud percentage
-$output = $output.$data['clouds']['all'];
+$output[] = $output.$data['clouds']['all'];
 //Get wind speed
-$output = $output.$data['wind']['speed'];
+$output[] = $output.$data['wind']['speed'];
 ?>
 <Response>
     <Sms>
-         <?php echo $output ?>
+         <?php echo join($output,',');?>
     </Sms>
 </Response>
