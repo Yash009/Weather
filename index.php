@@ -1,7 +1,7 @@
 <?php
 header('Content-Type: text/xml');
 //echo "<?xml version='1.0' encoding='UTF-8'";
-$city=$_POST['Body'];
+$city=urlencode($_POST['Body']);
 //$country="IN";
 //Two digit country code
 $url="http://api.openweathermap.org/data/2.5/weather?APPID=eb8d1e4d0ede56c4af30df4e8729e52e&q=".$city."&units=metric&lang=en";
