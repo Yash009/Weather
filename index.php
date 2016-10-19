@@ -12,6 +12,6 @@ $output = "Temperature: ".$output.$data['main']['temp']." C, ".$output.$data['we
 ?>
 <Response>
     <Sms>
-         <?php echo join($output,',');?>
+         <?php echo $output;?>
     </Sms>
 </Response>
