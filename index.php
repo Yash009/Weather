@@ -8,13 +8,13 @@ $json=file_get_contents($url);
 $data=json_decode($json,true);
 //Get current Temperature in Celsius
 var_dump($data);
-$output = $output.$data['main']['temp']."<br>";
+$output = $output.$data['main']['temp'];
 //Get weather condition
-$output = $output.$data['weather'][0]['main']."<br>";
+$output = $output.$data['weather'][0]['main'];
 //Get cloud percentage
-$output = $output.$data['clouds']['all']."<br>";
+$output = $output.$data['clouds']['all'];
 //Get wind speed
-$output = $output.$data['wind']['speed']."<br>";
+$output = $output.$data['wind']['speed'];
 ?>
 <Response>
     <Sms>
